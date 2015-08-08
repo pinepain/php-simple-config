@@ -13,3 +13,4 @@ before_script:
 
 script:
   - vendor/bin/phpunit --coverage-text --configuration phpunit.xml
+  - php example/benchmark_loaders.php
