@@ -8,15 +8,16 @@ class Config implements ConfigInterface
 {
     private $items = [];
 
+    /**
+     * {@inheritdoc}
+     */
     public function __construct($items)
     {
         $this->items = $items;
     }
 
     /**
-     * Get all of the configuration items.
-     *
-     * @return array
+     * {@inheritdoc}
      */
     public function all()
     {
@@ -24,10 +25,7 @@ class Config implements ConfigInterface
     }
 
     /**
-     * Determine if the given configuration value exists.
-     *
-     * @param  string $key
-     * @return bool
+     * {@inheritdoc}
      */
     public function has($key)
     {
@@ -46,11 +44,7 @@ class Config implements ConfigInterface
     }
 
     /**
-     * Get the specified configuration value.
-     *
-     * @param  string $key
-     * @param  mixed $default
-     * @return mixed
+     * {@inheritdoc}
      */
     public function get($key, $default = null)
     {
@@ -69,10 +63,7 @@ class Config implements ConfigInterface
     }
 
     /**
-     * Set a given configuration value.
-     *
-     * @param  string $key
-     * @param  mixed $value
+     * {@inheritdoc}
      */
     public function set($key, $value = null)
     {

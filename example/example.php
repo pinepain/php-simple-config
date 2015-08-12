@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use \Pinepain\SimpleConfig\Loaders\FilesLoader;
+use Pinepain\SimpleConfig\Loaders\FilesLoader;
 use Pinepain\SimpleConfig\Config;
 
 // it's good idea to use some dotenv library here and load env-specific env variables to use them later
@@ -10,8 +10,8 @@ use Pinepain\SimpleConfig\Config;
 
 // Ok, let's load our config. Note, that we load only files that do not starts with `.` (dot) and have
 // .php extension
-$loader = new FilesLoader();
-$config_items = $loader->load(__DIR__ . '/config');
+$loader = new FilesLoader(__DIR__ . '/config');
+$config_items = $loader->load();
 // No we have all config items stored as array in $config_items
 
 // In fact, Config is just tinny wrapper for array dot notation, so no magic here, just sugar

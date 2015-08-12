@@ -5,7 +5,11 @@ namespace Pinepain\SimpleConfig;
 
 interface ConfigInterface
 {
-    // __construct(array | ArrayObject $config)
+    /**
+     * @param array | \ArrayObject $items
+     */
+    public function __construct($items);
+
     /**
      * Get all of the configuration items.
      *
@@ -17,6 +21,7 @@ interface ConfigInterface
      * Determine if the given configuration value exists.
      *
      * @param  string $key
+     *
      * @return bool
      */
     public function has($key);
@@ -25,7 +30,8 @@ interface ConfigInterface
      * Get the specified configuration value.
      *
      * @param  string $key
-     * @param  mixed $default
+     * @param  mixed  $default
+     *
      * @return mixed
      */
     public function get($key, $default = null);
@@ -34,7 +40,8 @@ interface ConfigInterface
      * Set a given configuration value.
      *
      * @param  string $key
-     * @param  mixed $value
+     * @param  mixed  $value
+     *
      * @return void
      */
     public function set($key, $value = null);

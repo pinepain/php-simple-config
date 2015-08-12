@@ -4,10 +4,10 @@ return [
     'connections' => [
         'default' => [
             'driver'   => 'mysql',
-            'host'     => 'localhost',
+            'host'     => getenv('DB_HOST') ?: 'localhost',
             'port'     => 3306,
-            'user'     => 'guest',
-            'password' => 'secret',
+            'user'     => getenv('DB_USER') ?: 'guest',
+            'password' => getenv('DB_PASSWORD') ?: 'secret',
         ]
     ]
 ];
