@@ -6,11 +6,6 @@ namespace Pinepain\SimpleConfig;
 interface ConfigInterface
 {
     /**
-     * @param array | \ArrayObject $items
-     */
-    public function __construct($items);
-
-    /**
      * Get all of the configuration items.
      *
      * @return array
