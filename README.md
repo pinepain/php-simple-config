@@ -1,3 +1,6 @@
+WARNING: This project is UNSUPPORTED and ABANDONED
+==================================================
+
 # Php Simple Config
 
 [![Build Status](https://travis-ci.org/pinepain/php-simple-config.svg)](https://travis-ci.org/pinepain/php-simple-config)
